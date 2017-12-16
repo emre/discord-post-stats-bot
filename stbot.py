@@ -278,7 +278,7 @@ async def on_message(message):
     if message.channel.name != POST_PAYOUT_BOT_CHANNEL_NAME:
         return
 
-    if not message.content.startswith("http://"):
+    if not message.content.startswith("http"):
         return
 
     if '@' not in message.content:
@@ -290,7 +290,7 @@ async def on_message(message):
         await client.say("Error: %s" % stats["message"])
 
     reply = "Total Payout: $%s. (Organic: $%s, Bots: $%s) "
-    reply += "Net Votes: %s. Comments: %s. Age: %s old"
+    reply += "Net Votes: %s. Comments: %s. Age: %s old."
 
     reply = reply % (
         stats["total"],
