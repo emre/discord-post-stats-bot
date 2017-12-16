@@ -1,4 +1,3 @@
-https://steemit.com/travel/@emrebeyler/travel-hacks
 import logging
 import os
 
